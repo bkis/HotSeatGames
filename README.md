@@ -15,3 +15,5 @@ If you want to add new games, just follow these steps:
 1. Create a package with your game's name under `idh.hotseatgames.games` (e.g. `idh.hotseatgames.games.mygame`).
 2. Create a game class (preferrably matching your packages name, e.g. `MyGame`) inside this package. This game class must implement the `IGame` interface correctly to work with _Hot Seat Games_. You are free to use the very helpful utility classes in `idh.hotseatgames.utils` ([have a look](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/utils)!). Everything else is up to you.
 3. Add your game package and class name to the static array `GAMES_SUB_PATHS` in the `GameManager` class to "register" your game with the engine.
+
+**✨ You are welcome to [contribute your games to this repository](https://guides.github.com/activities/forking/)!**
