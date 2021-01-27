@@ -3,7 +3,7 @@
 [![HitCount](http://hits.dwyl.io/bkis/HotSeatGames.svg)](http://hits.dwyl.io/bkis/HotSeatGames)
 
 
-A simple CLI Minigames engine. Created as a Java learning project for the students of my programming class at the [_Institute for Digital Humanities_](https://github.com/DH-Cologne) ([University of Cologne](https://uni-koeln.de/)).
+A simple CLI minigames engine. Created as a Java learning project for the students of my programming class at the [_Institute for Digital Humanities_](https://github.com/DH-Cologne) ([University of Cologne](https://uni-koeln.de/)).
 
 ![screenshot](doc/screenshot.png)
 
