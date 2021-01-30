@@ -24,6 +24,7 @@ public class GamesManager {
 	private static final String[] GAMES_SUB_PATHS = {
 			"fiftyfifty.FiftyFifty",
 			"hypertyper.HyperTyper",
+			"blackjack.BlackJack",
 	};
 	
 	private List<Class<?>> randomGames;
