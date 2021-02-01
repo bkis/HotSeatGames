@@ -38,9 +38,13 @@ public class RockPaperScissors implements IGame {
 			String input;
 			char playerPick;
 			
-			// check that user input is of length 1 and corresponds to option R, P or S
+			// check that user input is of length 1 and
+			//corresponds to option R, P or S
 			do {
-				System.out.println("> Pick your weapon:\n \n  Rock:     [R]\n  Paper:    [P]\n  Scissors: [S]\n>");
+				System.out.print("> Pick your weapon:\n\n"
+						+ "  Rock:     [R]\n"
+						+ "  Paper:    [P]\n"
+						+ "  Scissors: [S]\n>");
 				input = scanner.nextLine();
 			} while ( (input.length() > 1 )
 			       || (input.length() < 1 )
