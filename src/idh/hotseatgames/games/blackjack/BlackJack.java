@@ -33,8 +33,10 @@ public class BlackJack implements IGame {
 		// As long as the points are under 21 the player decides wether he draws or not 
 		while (points < 21) {
 			
-			int drawOrNot = (int) input.prompt(playerName + ", you got " + points + " points.\n" 
-												+ "Do you want to draw another card? [1: yes, 0: no]", 0, 1);
+			int drawOrNot = (int) input.prompt(
+					playerName + ", you got " + points + " points.\n" 
+					+ "Do you want to draw another card?\n"
+					+ "[1: yes, 0: no]\n > ", 0, 1);
 			
 			if (drawOrNot == 1) {
 				Delay.now(1000);
@@ -87,7 +89,8 @@ public class BlackJack implements IGame {
 				+ "The goal is to get as close as possible to a total of 21 points,\n"
 				+ "but if they get more than 21 points, they instantly lose.\n"
 				+ "Ace is 11 points, King, Queen and Jack are 10 points.\n"
-				+ "The other cards' values are as indicated on the card";
+				+ "The other cards' values are as indicated on the card.\n"
+				+ "A win is worth 5 points, a draw is worth 3 points!";
 	}
 
 	@Override
