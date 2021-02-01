@@ -17,6 +17,7 @@ At this point, the following games are included in _Hot Seat Games_ (sorted by d
 - Hyper Typer (by [bkis](https://github.com/bkis))
 - Black Jack (by [cthilo](https://github.com/cthilo))
 - Rock-Paper-Scissors (by [esmith2smail](https://github.com/esmith2smail))
+- Binory (by [bkis](https://github.com/bkis))
 
 
 ## How to add new games

@@ -25,6 +25,7 @@ public class GamesManager {
 			"hypertyper.HyperTyper",
 			"rockpaperscissors.RockPaperScissors",
 			"blackjack.BlackJack",
+			"binory.Binory",
 	};
 	
 	private List<Class<?>> randomGames;
