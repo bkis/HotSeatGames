@@ -51,8 +51,12 @@ public class HotSeatGames {
 	private void startGames() {
 		// iterate over every game planned for this session
 		while(games.gamesLeft() > 0) {
-			System.out.println("\n\nGAME " + games.currentGameNumber()
-					+ " of " + games.totalGames());
+			StringUtils.printLineBreaks(1);
+			// prompt for ENTER to start next game
+			input.prompt("Press [ENTER] to start game " 
+					+ games.currentGameNumber() + " of " 
+					+ games.totalGames() + " ...");
+			StringUtils.cls(); // (fake-) clear console
 			IGame game = games.nextGame(); // get next game
 			shufflePlayers(); // shuffle players
 			System.out.println("\n");
@@ -75,13 +79,7 @@ public class HotSeatGames {
 				player.addPoints(points);
 				Delay.now(500);
 			}
-			printPoints(false); // print current points table
-			// prompt for ENTER to start next game
-			if (games.gamesLeft() > 0) {
-				input.prompt("Press [ENTER] to continue with game " 
-						+ games.currentGameNumber() + " of " 
-						+ games.totalGames() + " ...");
-			}
+			printPoints(games.gamesLeft() == 0); // print current points table
 		}
 	}
 	
@@ -99,7 +97,7 @@ public class HotSeatGames {
 		}
 		System.out.println("============================================\n\n");
 		// end of games session?
-		if (games.gamesLeft() > 0)
+		if (!end)
 			return;
 		// who won?
 		// filter winners
