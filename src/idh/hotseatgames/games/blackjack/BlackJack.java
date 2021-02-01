@@ -33,8 +33,8 @@ public class BlackJack implements IGame {
 		// As long as the points are under 21 the player decides wether he draws or not 
 		while (points < 21) {
 			
-			int drawOrNot = (int) input.prompt(playerName + " you got " + points + " points.\n" 
-												+ "Do you want to draw another card? 1: yes 0 no", 0, 1);
+			int drawOrNot = (int) input.prompt(playerName + ", you got " + points + " points.\n" 
+												+ "Do you want to draw another card? [1: yes, 0: no]", 0, 1);
 			
 			if (drawOrNot == 1) {
 				Delay.now(1000);
@@ -106,7 +106,7 @@ public class BlackJack implements IGame {
 		
 		//If the player scored more than 21 points, he loses instantly 
 		if (pointsPlayer > 21)  {
-			System.out.println("Thats over 21! The Dealer wins!");
+			System.out.println("That's over 21! The dealer wins!");
 			return 0; 
 			
 		} else {
