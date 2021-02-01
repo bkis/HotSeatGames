@@ -1,6 +1,6 @@
 # 🕹 Hot Seat Games
 
-A simple CLI minigames engine. Created as a Java learning project for the students of my programming class at the [_Institute for Digital Humanities_](https://github.com/DH-Cologne) ([University of Cologne](https://uni-koeln.de/)).
+A simple [CLI](https://en.wikipedia.org/wiki/Command-line_interface) minigames engine for multiple players on the same computer. Created as a **Java learning project** for the students of my OOP programming class at the [_Institute for Digital Humanities_](https://github.com/DH-Cologne) ([University of Cologne](https://uni-koeln.de/)).
 
 ![screenshot](doc/screenshot.png)
 
