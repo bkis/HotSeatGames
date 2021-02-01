@@ -19,7 +19,8 @@ public class RockPaperScissors implements IGame {
 	public String getInstructions() {
 		return "Rock wins against scissors.\n"
 			 + "Scissors win against paper.\n"
-			 + "Paper wins against rock.\n";
+			 + "Paper wins against rock.\n"
+			 + "Each player plays three rounds.\n";
 	}
 	
 	@Override
