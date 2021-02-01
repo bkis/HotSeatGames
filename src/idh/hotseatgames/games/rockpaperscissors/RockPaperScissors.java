@@ -4,9 +4,9 @@ import idh.hotseatgames.games.IGame;
 import idh.hotseatgames.utils.Delay;
 import idh.hotseatgames.utils.ResourceReader;
 import idh.hotseatgames.utils.StringUtils;
+import idh.hotseatgames.utils.UserInput;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class RockPaperScissors implements IGame {
 		
@@ -26,9 +26,7 @@ public class RockPaperScissors implements IGame {
 	public int startRound(String playerName) {
 		
 		int points = 0;
-		
-		@SuppressWarnings("resource")
-		Scanner scanner = new Scanner(System.in);
+		UserInput in = UserInput.instance();
 
 		for (int i = 1; i <= 3; i++) {
 			
@@ -40,17 +38,12 @@ public class RockPaperScissors implements IGame {
 			
 			// check that user input is of length 1 and
 			//corresponds to option R, P or S
-			do {
-				System.out.print("> Pick your weapon:\n\n"
-						+ "  Rock:     [R]\n"
-						+ "  Paper:    [P]\n"
-						+ "  Scissors: [S]\n>");
-				input = scanner.nextLine();
-			} while ( (input.length() > 1 )
-			       || (input.length() < 1 )
-				   || (Character.toUpperCase(input.charAt(0)) != 'R') 
-				   && (Character.toUpperCase(input.charAt(0)) != 'P')
-				   && (Character.toUpperCase(input.charAt(0)) != 'S'));
+			input = in.prompt(
+					"> Pick your weapon:\n\n"
+					+ "  Rock:     [R]\n"
+					+ "  Paper:    [P]\n"
+					+ "  Scissors: [S]\n>",
+					"[RPSrps]");
 		
 			// convert input to uppercase char
 		    playerPick = Character.toUpperCase(input.charAt(0));
@@ -60,11 +53,14 @@ public class RockPaperScissors implements IGame {
 			Random rand = new Random();
 			char gamePick = rps.charAt(rand.nextInt(rps.length()));
 
-			// concatenate player and game pick to generate filename of corresponding ascii image
-			String filename = String.valueOf(playerPick) + String.valueOf(gamePick).concat(".ascii");
+			// concatenate player and game pick to generate
+			// filename of corresponding ascii image
+			String filename = String.valueOf(playerPick) 
+					+ String.valueOf(gamePick).concat(".ascii");
 			
 			// display ascii images of player and game pick
-			StringUtils.slideInText(ResourceReader.readResource(filename, getClass()), 150);			
+			StringUtils.slideInText(
+					ResourceReader.readResource(filename, getClass()), 150);			
 			System.out.println();
 			Delay.now(500);
 			
