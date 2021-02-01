@@ -6,6 +6,7 @@ import java.util.Random;
 
 import idh.hotseatgames.games.IGame;
 import idh.hotseatgames.utils.ResourceReader;
+import idh.hotseatgames.utils.StopWatch;
 import idh.hotseatgames.utils.UserInput;
 
 /**
@@ -27,7 +28,7 @@ public class HyperTyper implements IGame {
 	@Override
 	public int startRound(String playerName) {
 		this.nextWordIndex = 0;
-		this.timer = new StopWatch();
+		this.timer = StopWatch.instance();
 		this.words = getWords(MAX_NUMBER_OF_WORDS);
 		UserInput input = UserInput.instance();
 		double time;
