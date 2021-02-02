@@ -1,0 +1,2 @@
+The player has to solve 10 simple math equations and enter the correct results 
+in under 5 seconds per equation. Each correct result given in time is worth 1 point.
