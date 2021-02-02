@@ -87,13 +87,5 @@ public class StringUtils {
 		sbText.deleteCharAt(sbText.length() - 1); // remove last line break
 		return sbText.toString(); // return layouted text
 	}
-	
-	public static void main(String[] args) {
-		String text = "Ein Raabe geht im Feld spazieren.\nDa fällt der Weizen"
-				+ " um. Ja, so geht mein Lied. Es ergibt keinen Sinn!!!\nAber"
-				+ " was soll ich tun? Immerhin brauche ich einen Text zum "
-				+ "Testen dieser coolen Methode!\nAlles wird gut....";
-		System.out.println(layout(text, 80, 0));
-	}
 
 }
