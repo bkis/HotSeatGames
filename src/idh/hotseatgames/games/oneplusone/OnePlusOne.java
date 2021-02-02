@@ -9,18 +9,16 @@ public class OnePlusOne implements IGame{
 	
 	private static int MILLISECONDS_PER_WORD = 5000;
 	
-	private int nextTaskIndex;
 	private StopWatch timer;
 
 	@Override
 	public int startRound(String playerName) {
-		this.nextTaskIndex = 0;
 		this.timer = StopWatch.instance();
 		UserInput input = UserInput.instance();
 		double time;
 		int points = 0;
 		
-		for(int i = nextTaskIndex; i < 10; i++) {
+		for(int i = 0; i < 10; i++) {
 			int random1 = (int) (Math.random() * 10);
 			int random2 = (int) (Math.random() * 10);
 			String result = "";
