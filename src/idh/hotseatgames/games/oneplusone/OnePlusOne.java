@@ -66,7 +66,7 @@ public class OnePlusOne implements IGame{
 
 	@Override
 	public String getIntroBanner() {
-		return ResourceReader.readResource("intro_banner.ascii.txt", getClass());
+		return ResourceReader.readResource("intro_banner.ascii", getClass());
 	}
 
 }
