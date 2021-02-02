@@ -1,0 +1,2 @@
+The player has to solve the given math problem and type in the correct answer 
+in under 5 seconds per task. The player gets 1 point per correctly solved task.

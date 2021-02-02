@@ -61,10 +61,7 @@ public class OnePlusOne implements IGame{
 
 	@Override
 	public String getInstructions() {
-		return "The player has to solve the given math problem and\n" 
-				+ "type in the correct answer in under 5 seconds per\n"
-				+ "task. The player gets 1 point per correctly solved\n"
-				+ "task.";
+		return ResourceReader.readResource("instructions.txt", getClass());
 	}
 
 	@Override
