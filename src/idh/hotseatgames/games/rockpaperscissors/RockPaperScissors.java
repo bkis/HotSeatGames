@@ -61,7 +61,7 @@ public class RockPaperScissors implements IGame {
 			
 			// display ascii images of player and game pick
 			StringUtils.slideInText(
-					ResourceReader.readResource(filename, getClass()), 150);			
+					ResourceReader.readResource(filename, getClass()), 150, 0);			
 			System.out.println();
 			Delay.now(500);
 			

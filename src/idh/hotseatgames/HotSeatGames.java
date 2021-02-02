@@ -36,10 +36,10 @@ public class HotSeatGames {
 
 	private HotSeatGames() {
 		StringUtils.cls(); // clear screen
-		// print "HOT SEAT GAMES" intro banner
-		StringUtils.slideInText(ResourceReader.readResource(
-				"intro_banner.ascii", getClass()), // identify resource
-				150); // ms delay
+		// slide in "HOT SEAT GAMES" intro banner
+		StringUtils.slideInText(
+				ResourceReader.readResource("intro_banner.ascii", getClass()),
+				150, 4);
 		StringUtils.printLineBreaks(1);
 		this.input = UserInput.instance(); // create user input wrapper instance
 		this.players = createPlayers(); // create players
@@ -59,13 +59,15 @@ public class HotSeatGames {
 			StringUtils.cls(); // (fake-) clear console
 			IGame game = games.nextGame(); // get next game
 			shufflePlayers(); // shuffle players
-			System.out.println("\n");
-			StringUtils.slideInText(game.getIntroBanner(), 150); // game intro
+			StringUtils.printLineBreaks(2);
+			StringUtils.slideInText(game.getIntroBanner(), 150, 4); // intro
 			Delay.now(500); // delay
-			System.out.println();
-			StringUtils.slideInText(game.getInstructions(), 150); // instruct.
+			StringUtils.printLineBreaks(1);
+			StringUtils.slideInText(
+					StringUtils.layout(game.getInstructions(), 80, 4),
+					150, 0); // layout and print instructions
 			Delay.now(500); // delay
-			System.out.println();
+			StringUtils.printLineBreaks(1);
 			// start game for each player in succession, add won points
 			for (Player player : players) {
 				input.prompt("> " + player.getName() 
@@ -106,8 +108,9 @@ public class HotSeatGames {
 			.filter(p -> p.getPoints() == players[0].getPoints())
 			.collect(Collectors.toList()).toArray(Player[]::new);
 		// print CONGRATS banner
-		StringUtils.slideInText(ResourceReader.readResource(
-				"winner_screen.ascii", getClass()), 150);
+		StringUtils.slideInText(
+				ResourceReader.readResource("winner_screen.ascii", getClass()),
+				150, 4);
 		// print winner(s)
 		StringUtils.printLineBreaks(1);
 		System.out.println("   THE WINNER" 
