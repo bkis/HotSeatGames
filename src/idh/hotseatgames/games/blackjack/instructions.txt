@@ -1,0 +1,7 @@
+The player plays Black Jack against the dealer. The player goes first. 
+They get 2 open cards and have to decide whether they draw or not. 
+The goal is to get as close as possible to a total of 21 points, 
+but if they get more than 21 points, they instantly lose. 
+Ace is 11 points, King, Queen and Jack are 10 points. 
+The other cards' values are as indicated on the card. 
+A win is worth 5 points, a draw is worth 3 points!

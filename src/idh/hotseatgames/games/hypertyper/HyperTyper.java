@@ -101,11 +101,7 @@ public class HyperTyper implements IGame {
 
 	@Override
 	public String getInstructions() {
-		return "The player has to correctly type up to ten words shown to them\n"
-				+ "in under 5 seconds per word. The words become longer and more\n"
-				+ "complicated over time. The player gets one point per correctly\n"
-				+ "typed word, but a mistake or an exceeding of the five seconds\n"
-				+ "limit mean an immediate 'GAME OVER'!";
+		return ResourceReader.readResource("instructions.txt", getClass());
 	}
 
 	@Override

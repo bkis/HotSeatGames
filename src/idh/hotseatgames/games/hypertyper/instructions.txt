@@ -1,0 +1,5 @@
+The player has to correctly type up to ten words shown to them in 
+under 5 seconds per word. The words become longer and more complicated 
+over time. The player gets one point per correctly typed word, 
+but a mistake or an exceeding of the five seconds limit 
+mean an immediate 'GAME OVER'!

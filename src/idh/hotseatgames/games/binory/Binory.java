@@ -63,7 +63,7 @@ public class Binory implements IGame {
 
 	@Override
 	public String getInstructions() {
-		return ResourceReader.readResource("instructions.ascii", getClass());
+		return ResourceReader.readResource("instructions.txt", getClass());
 	}
 
 	@Override

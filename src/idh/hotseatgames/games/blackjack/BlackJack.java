@@ -83,14 +83,7 @@ public class BlackJack implements IGame {
 	
 	@Override
 	public String getInstructions() {
-		return "The player plays Black Jack against the dealer. "
-				+ "The player goes first.\n"
-				+ "They get 2 open cards and have to decide whether they draw or not.\n"
-				+ "The goal is to get as close as possible to a total of 21 points,\n"
-				+ "but if they get more than 21 points, they instantly lose.\n"
-				+ "Ace is 11 points, King, Queen and Jack are 10 points.\n"
-				+ "The other cards' values are as indicated on the card.\n"
-				+ "A win is worth 5 points, a draw is worth 3 points!";
+		return ResourceReader.readResource("instructions.txt", getClass());
 	}
 
 	@Override
