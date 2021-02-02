@@ -18,6 +18,7 @@ At this point, the following games are included in _Hot Seat Games_ (in order of
 - Black Jack (by [cthilo](https://github.com/cthilo))
 - Rock-Paper-Scissors (by [esmith2smail](https://github.com/esmith2smail))
 - Binory (by [bkis](https://github.com/bkis))
+- One Plus One (by [chrkell](https://github.com/chrkell))
 
 
 ## How to add new games
