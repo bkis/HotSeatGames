@@ -66,7 +66,7 @@ public class StringUtils {
 		String[] tokens = text.split("\\s+"); // tokenize by whitespaces
 		StringBuilder sbLine = new StringBuilder(); // line buffer
 		StringBuilder sbText = new StringBuilder(); // final text
-		String padString = String.format("%" + pad + "s", "");
+		String padString = pad > 0 ? String.format("%" + pad + "s", "") : "";
 		
 		// iterate tokens
 		for (String token : tokens) {
@@ -75,7 +75,7 @@ public class StringUtils {
 				sbLine.append(padString);
 			}
 			// not enough space for next token + whitespace + pad? finish line!
-			if ((sbLine.length() + 1 + token.length() + pad) > width) {
+			if ((sbLine.length() + token.length() + pad) > width) {
 				sbText.append(sbLine.toString()); // append line to text
 				sbText.append("\n"); // append line break to text
 				sbLine = new StringBuilder(padString); // new, empty line
@@ -93,7 +93,7 @@ public class StringUtils {
 				+ " um. Ja, so geht mein Lied. Es ergibt keinen Sinn!!!\nAber"
 				+ " was soll ich tun? Immerhin brauche ich einen Text zum "
 				+ "Testen dieser coolen Methode!\nAlles wird gut....";
-		System.out.println(layout(text, 80, 4));
+		System.out.println(layout(text, 80, 0));
 	}
 
 }
