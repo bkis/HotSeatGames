@@ -1,8 +1,8 @@
 package idh.hotseatgames.games.oneplusone;
 
 import idh.hotseatgames.games.IGame;
-import idh.hotseatgames.games.hypertyper.Timer;
 import idh.hotseatgames.utils.ResourceReader;
+import idh.hotseatgames.utils.StopWatch;
 import idh.hotseatgames.utils.UserInput;
 
 public class OnePlusOne implements IGame{
@@ -10,12 +10,12 @@ public class OnePlusOne implements IGame{
 	private static int MILLISECONDS_PER_WORD = 5000;
 	
 	private int nextTaskIndex;
-	private Timer timer;
+	private StopWatch timer;
 
 	@Override
 	public int startRound(String playerName) {
 		this.nextTaskIndex = 0;
-		this.timer = new Timer();
+		this.timer = StopWatch.instance();
 		UserInput input = UserInput.instance();
 		double time;
 		int points = 0;
