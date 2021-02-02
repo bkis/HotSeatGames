@@ -25,10 +25,11 @@ public class StringUtils {
 	 * @param s the text to print
 	 * @param msDelay milliseconds to delay the printing of each line
 	 */
-	public static void slideInText(String s, int msDelay) {
+	public static void slideInText(String s, int msDelay, int leftPad) {
 		if (s == null) return;
+		String pad = leftPad > 0 ? String.format("%" + leftPad + "s", "") : "";
 		for (String line : s.split("\n")) {
-			System.out.println(line);
+			System.out.println(pad + line);
 			Delay.now(150);
 		}
 	}
