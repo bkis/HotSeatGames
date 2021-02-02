@@ -17,12 +17,12 @@ public interface IGame {
 	public int startRound(String playerName);
 	
 	/**
-	 * Prints a help/instructional text explaining how this game works.
+	 * Returns a help/instructional text explaining how this game works
 	 */
 	public String getInstructions();
 	
 	/**
-	 * Prints an intro banner for this game to the console.
+	 * Returns a (possibly multi-line) intro banner string for this game
 	 */
 	public String getIntroBanner();
 	
