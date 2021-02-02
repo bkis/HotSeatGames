@@ -49,5 +49,51 @@ public class StringUtils {
 	public static void cls() {
 		printLineBreaks(100);
 	}
+	
+	/**
+	 * 
+	 * @param text
+	 * @param width
+	 * @param pad
+	 * @return
+	 */
+	public static String layout(
+			String text,
+			int width,
+			int pad) {
+		
+		text = text.replaceAll("\n", " "); // replace line breaks w/ whitespaces
+		String[] tokens = text.split("\\s+"); // tokenize by whitespaces
+		StringBuilder sbLine = new StringBuilder(); // line buffer
+		StringBuilder sbText = new StringBuilder(); // final text
+		String padString = String.format("%" + pad + "s", "");
+		
+		// iterate tokens
+		for (String token : tokens) {
+			// empty line? add pad.
+			if (sbLine.length() == 0) {
+				sbLine.append(padString);
+			}
+			// not enough space for next token + whitespace + pad? finish line!
+			if ((sbLine.length() + 1 + token.length() + pad) > width) {
+				sbText.append(sbLine.toString()); // append line to text
+				sbText.append("\n"); // append line break to text
+				sbLine = new StringBuilder(padString); // new, empty line
+			}
+			// append token and a whitespace
+			sbLine.append(token + " ");
+		}
+		
+		sbText.deleteCharAt(sbText.length() - 1); // remove last line break
+		return sbText.toString(); // return layouted text
+	}
+	
+	public static void main(String[] args) {
+		String text = "Ein Raabe geht im Feld spazieren.\nDa fällt der Weizen"
+				+ " um. Ja, so geht mein Lied. Es ergibt keinen Sinn!!!\nAber"
+				+ " was soll ich tun? Immerhin brauche ich einen Text zum "
+				+ "Testen dieser coolen Methode!\nAlles wird gut....";
+		System.out.println(layout(text, 80, 4));
+	}
 
 }
