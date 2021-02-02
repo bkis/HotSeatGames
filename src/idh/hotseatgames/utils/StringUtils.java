@@ -63,7 +63,9 @@ public class StringUtils {
 			int width,
 			int pad) {
 		
-		text = text.replaceAll("\n", " "); // replace line breaks w/ whitespaces
+		if (text == null || text.length() == 0) return "";
+		
+		text = text.replaceAll("\n", " ").replaceAll("\\s+", " ").trim(); // override line breaks
 		String[] tokens = text.split("\\s+"); // tokenize by whitespaces
 		StringBuilder sbLine = new StringBuilder(); // line buffer
 		StringBuilder sbText = new StringBuilder(); // final text
@@ -75,18 +77,17 @@ public class StringUtils {
 			if (sbLine.length() == 0) {
 				sbLine.append(padString);
 			}
-			// not enough space for next token + whitespace + pad? finish line!
+			// not enough space for next token + pad? finish this line!
 			if ((sbLine.length() + token.length() + pad) > width) {
-				sbText.append(sbLine.toString()); // append line to text
-				sbText.append("\n"); // append line break to text
+				sbText.append(sbLine.toString() + "\n"); // append line to text
 				sbLine = new StringBuilder(padString); // new, empty line
 			}
-			// append token and a whitespace
-			sbLine.append(token + " ");
+			// append a (optional) whitespace and the token
+			sbLine.append((sbLine.length() > 0 + pad ? " " : "") + token);
 		}
 		
-		sbText.deleteCharAt(sbText.length() - 1); // remove last line break
-		return sbText.toString(); // return layouted text
+		sbText.append(sbLine.toString()); // append last line to text
+		return sbText.toString(); // return layouted text	
 	}
-
+	
 }
