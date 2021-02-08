@@ -7,7 +7,11 @@ A simple [CLI](https://en.wikipedia.org/wiki/Command-line_interface) minigames e
 
 ## How to play
 
-Open the project in your Java IDE and run it (for development). **OR** use your IDE (or your hacker skills and `javac` 🤓) to create a runnable `.jar` file from the project and run it with `java -jar HotSeatGames.jar`!
+You have **three options** here:
+
+1. Download the (_possibly outdated, probably up to date_) [current release](https://github.com/bkis/HotSeatGames/releases) and run it with `java -jar HotSeatGames.jar`, **OR**
+2. Open the project in your favorite Java IDE and run it from there (_for development_), **OR**
+3. Use your IDE (or your hacker skills and `javac` 🤓) to create a runnable `.jar` file from the [current project source](https://github.com/bkis/HotSeatGames/archive/main.zip), then run it with `java -jar HotSeatGames.jar`!
 
 
 ## Included games
