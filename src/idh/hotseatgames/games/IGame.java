@@ -11,11 +11,10 @@ public interface IGame {
 	
 	/**
 	 * Starts a session of this game for one player
-	 * and returns the points made. A game should be designed in a way that
+	 * and returns the points that player made. A game should be designed in a way that
 	 * the points that can be made don't (drastically) exceed 10 points.
 	 * So either make it impossible to get more than 10 points
-	 * (e.g. by playing only three rounds worth one point each), or make it very, very hard
-	 * to gain more than 10 points!
+	 * (e.g. by playing only three rounds worth one point each), or make it very, very hard!
 	 * @return int value of the points gained by the player
 	 */
 	public int startRound(String playerName);
