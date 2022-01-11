@@ -30,7 +30,10 @@ At this point, the following games are included in *Hot Seat Games* (in order of
 If you want to add new games, just follow these steps:
 
 1. Create a package with your game's name under `idh.hotseatgames.games` (e.g. `idh.hotseatgames.games.mygame`).
-2. Create a game class (preferrably matching your packages name, e.g. `MyGame`) inside this package. This game class must implement the `IGame` interface correctly to work with *Hot Seat Games*. You are free to use the very helpful utility classes in `idh.hotseatgames.utils` ([have a look](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/utils)!). Try to take inspiration from the existing games' implementations! Everything else is up to you.
+2. Create a game class (preferably matching your packages name, e.g. `MyGame`) inside the package you just created. This game class must implement the `IGame` interface correctly to work with *Hot Seat Games*. Please **read the documentation** of the `IGame` interface's methods and stick to the conventions explained there! Furthermore, you are free to use the [very helpful utility classes](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/utils) in `idh.hotseatgames.utils`. A final hint: Try to take inspiration from the existing games' implementations! Everything else is up to you.
 3. Add your game package and class name to the static array `GAMES_SUB_PATHS` in the `GameManager` class to "register" your game with the *Hot Seat Games* Engine.
 
-**✨ You are welcome to contribute your games to this repository!** If you don't know how to do that, you may read [this](https://docs.github.com/en/github/getting-started-with-github/quickstart) to learn how to set up git and to understand the basics, then read [this](https://github.com/susam/gitpr) to learn about the ideal workflow for contributing.
+
+## Contributing
+
+You are **very** welcome to contribute your games to this repository! If you don't know how to do that, you may read [this](https://docs.github.com/en/github/getting-started-with-github/quickstart) to learn how to set up Git and to understand the basics, then read [this](https://github.com/susam/gitpr) to learn about the ideal workflow for contributing to existing projects on GitHub.
