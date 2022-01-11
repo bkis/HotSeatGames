@@ -24,6 +24,7 @@ public class StringUtils {
 	 * the passed amount of milliseconds
 	 * @param s the text to print
 	 * @param msDelay milliseconds to delay the printing of each line
+	 * @param leftPad milliseconds to delay the printing of each line
 	 */
 	public static void slideInText(String s, int msDelay, int leftPad) {
 		if (s == null) return;
