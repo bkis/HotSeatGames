@@ -18,11 +18,11 @@ You have **three options** here:
 
 At this point, the following games are included in *Hot Seat Games* (in order of contribution):
 
-- Hyper Typer (by [bkis](https://github.com/bkis))
-- Black Jack (by [cthilo](https://github.com/cthilo))
-- Rock-Paper-Scissors (by [esmith2smail](https://github.com/esmith2smail))
-- Binory (by [bkis](https://github.com/bkis))
-- One Plus One (by [chrkell](https://github.com/chrkell))
+- **[Hyper Typer](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/hypertyper)** (by [bkis](https://github.com/bkis))
+- **[Black Jack](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/blackjack)** (by [cthilo](https://github.com/cthilo))
+- **[Rock-Paper-Scissors](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/rockpaperscissors)** (by [esmith2smail](https://github.com/esmith2smail))
+- **[Binory](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/binory)** (by [bkis](https://github.com/bkis))
+- **[One Plus One](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/oneplusone)** (by [chrkell](https://github.com/chrkell))
 
 
 ## How to add new games
