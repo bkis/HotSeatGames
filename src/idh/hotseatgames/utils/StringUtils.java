@@ -1,7 +1,9 @@
 package idh.hotseatgames.utils;
 
+import java.util.Scanner;
+
 /**
- * Some string- and cli-related utility methods 
+ * Some string- and CLI-related utility methods 
  * for the HotSeatGames minigame engine
  * 
  * @author bkis
@@ -28,9 +30,9 @@ public class StringUtils {
 	 */
 	public static void slideInText(String s, int msDelay, int leftPad) {
 		if (s == null) return;
-		String pad = leftPad > 0 ? String.format("%" + leftPad + "s", "") : "";
+		String padString = padString(leftPad);
 		for (String line : s.split("\n")) {
-			System.out.println(pad + line);
+			System.out.println(padString + line);
 			Delay.now(150);
 		}
 	}
@@ -53,42 +55,55 @@ public class StringUtils {
 	}
 	
 	/**
-	 * 
-	 * @param text
-	 * @param width
-	 * @param pad
-	 * @return
+	 * Indents and wraps the input text at (sequences of) whitespaces so that each line
+	 * contains a maximum of {@code charsPerLine} characters. Tokens that are alone longer than
+	 * this maximum will NOT be taken apart but will instead be used in a new line as they are,
+	 * so this might lead to exceeding {@code charsPerLine} in case of a very low value.
+	 * @param text The input text to indent and wrap
+	 * @param charsPerLine Maximum number of characters per line in the resulting text
+	 * @param pad The padding width
+	 * @return The resulting text
 	 */
-	public static String layout(
-			String text,
-			int width,
-			int pad) {
-		
+	public static String layout(String text, int charsPerLine, int pad) {
 		if (text == null || text.length() == 0) return "";
 		
 		text = text.replaceAll("\n", " ").replaceAll("\\s+", " ").trim(); // override line breaks
-		String[] tokens = text.split("\\s+"); // tokenize by whitespaces
+		Scanner scan = new Scanner(text); // stream text
+		scan.useDelimiter(" ");
 		StringBuilder sbLine = new StringBuilder(); // line buffer
 		StringBuilder sbText = new StringBuilder(); // final text
-		String padString = pad > 0 ? String.format("%" + pad + "s", "") : "";
+		String padString = padString(pad);
 		
 		// iterate tokens
-		for (String token : tokens) {
+		while (scan.hasNext()) {
+			String token = scan.next();
 			// empty line? add pad.
 			if (sbLine.length() == 0) {
 				sbLine.append(padString);
 			}
 			// not enough space for next token + pad? finish this line!
-			if ((sbLine.length() + token.length() + pad) > width) {
+			if ((sbLine.length() + token.length() + pad) > charsPerLine) {
 				sbText.append(sbLine.toString() + "\n"); // append line to text
-				sbLine = new StringBuilder(padString); // new, empty line
+				sbLine.setLength(0); // reset
+				sbLine.append(padString);
 			}
 			// append a (optional) whitespace and the token
 			sbLine.append((sbLine.length() > 0 + pad ? " " : "") + token);
 		}
 		
+		scan.close();
 		sbText.append(sbLine.toString()); // append last line to text
 		return sbText.toString(); // return layouted text	
 	}
 	
+	/**
+	 * Returns a sequence of blank spaces of the given length {@code width}.
+	 * @param width The padding width / length of blank spaces sequence
+	 * @return The resulting blank spaces sequence
+	 */
+	public static String padString(int width) {
+		return width > 0 ? String.format("%" + width + "s", "") : "";
+	}
+	
 }
+
