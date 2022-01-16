@@ -27,6 +27,7 @@ public class GamesManager {
 			"blackjack.BlackJack",
 			"binory.Binory",
 			"oneplusone.OnePlusOne",
+			"hangrylama.HangryLama",
 	};
 	
 	private List<Class<?>> randomGames;
