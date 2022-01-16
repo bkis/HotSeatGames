@@ -1,0 +1,7 @@
+The player is confronted with a hangry llama. It wants something to eat!
+Give the llama some food or it will bite you. This spceial kind of llama
+eats letters! Each round the player has 3 seconds to input the letters 
+the llama wants. There are up to 8 rounds for each player. 
+In the first round the llama asks for one letter, then for two and so on.
+Complete all 8 rounds to make the llama happy.
+Each completed round gives one point.

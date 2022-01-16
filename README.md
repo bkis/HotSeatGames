@@ -23,7 +23,7 @@ At this point, the following games are included in *Hot Seat Games* (in order of
 - **[Rock-Paper-Scissors](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/rockpaperscissors)** (by [esmith2smail](https://github.com/esmith2smail))
 - **[Binory](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/binory)** (by [bkis](https://github.com/bkis))
 - **[One Plus One](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/oneplusone)** (by [chrkell](https://github.com/chrkell))
-- **[Hangry Lama](https://github.com/MarcHorvath2001)** (by [MarcHorvath2001](https://github.com/MarcHorvath2001))
+- **[Hangry Llama](https://github.com/MarcHorvath2001)** (by [MarcHorvath2001](https://github.com/MarcHorvath2001))
 
 
 ## How to add new games

@@ -1,7 +1,0 @@
-The player is confronted with a hangry lama. It wants something to eat!
-Give the lama some food or it will bite you. This spceial kind of lama
-eats letters! Each round the player has 3 seconds to input the letters 
-the lama wants. There are up to 8 rounds for each player. 
-In the first round the lama asks for one letter, then for two and so on.
-Complete all 8 rounds to make the lama happy.
-Each completed round gives one point.
