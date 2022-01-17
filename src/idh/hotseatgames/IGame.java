@@ -1,4 +1,4 @@
-package idh.hotseatgames.games;
+package idh.hotseatgames;
 
 
 /**

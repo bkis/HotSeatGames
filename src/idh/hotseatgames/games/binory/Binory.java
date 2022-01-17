@@ -3,7 +3,7 @@ package idh.hotseatgames.games.binory;
 import java.util.Arrays;
 import java.util.Random;
 
-import idh.hotseatgames.games.IGame;
+import idh.hotseatgames.IGame;
 import idh.hotseatgames.utils.Delay;
 import idh.hotseatgames.utils.ResourceReader;
 import idh.hotseatgames.utils.StringUtils;

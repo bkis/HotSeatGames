@@ -1,6 +1,6 @@
 package idh.hotseatgames.games.oneplusone;
 
-import idh.hotseatgames.games.IGame;
+import idh.hotseatgames.IGame;
 import idh.hotseatgames.utils.ResourceReader;
 import idh.hotseatgames.utils.StopWatch;
 import idh.hotseatgames.utils.UserInput;

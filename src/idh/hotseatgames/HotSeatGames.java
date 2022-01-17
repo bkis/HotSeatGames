@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
-import idh.hotseatgames.games.GamesManager;
-import idh.hotseatgames.games.IGame;
 import idh.hotseatgames.utils.Delay;
 import idh.hotseatgames.utils.ResourceReader;
 import idh.hotseatgames.utils.StringUtils;

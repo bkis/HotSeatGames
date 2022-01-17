@@ -1,6 +1,6 @@
 package idh.hotseatgames.games.blackjack;
 
-import idh.hotseatgames.games.IGame;
+import idh.hotseatgames.IGame;
 import idh.hotseatgames.utils.Delay;
 import idh.hotseatgames.utils.ResourceReader;
 import idh.hotseatgames.utils.StringUtils;

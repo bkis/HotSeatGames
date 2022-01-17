@@ -2,7 +2,7 @@ package idh.hotseatgames.games.whereistheletter;
 
 import java.util.Random;
 
-import idh.hotseatgames.games.IGame;
+import idh.hotseatgames.IGame;
 import idh.hotseatgames.utils.ResourceReader;
 import idh.hotseatgames.utils.StopWatch;
 import idh.hotseatgames.utils.StringUtils;
