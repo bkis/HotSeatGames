@@ -1,0 +1,4 @@
+The player has to find a letter that hides between multiple symbols.
+If the player finds the letter they have to type it and press [ENTER].
+The faster you are the more points you will get.
+There are 5 rounds and there will be more rows of symbols over time.
