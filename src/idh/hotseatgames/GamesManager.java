@@ -29,6 +29,7 @@ public class GamesManager {
 			"oneplusone.OnePlusOne",
 			"hangryllama.HangryLlama",
 			"whereistheletter.WhereIsTheLetter",
+			"roulette.Roulette",
 	};
 	
 	private List<Class<?>> randomGames;

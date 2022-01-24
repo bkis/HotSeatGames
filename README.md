@@ -25,6 +25,7 @@ At this point, the following games are included in *Hot Seat Games* (in order of
 - **[One Plus One](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/oneplusone)** (by [chrkell](https://github.com/chrkell))
 - **[Hangry Llama](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/hangryllama)** (by [MarcHorvath2001](https://github.com/MarcHorvath2001))
 - **[Where Is The Letter?](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/whereistheletter)** (by [MilchStrassenBoi](https://github.com/MilchStrassenBoi))
+- **[Roulette](https://github.com/bkis/HotSeatGames/tree/main/src/idh/hotseatgames/games/roulette)** (by L. Markic)
 
 
 ## How to add new games

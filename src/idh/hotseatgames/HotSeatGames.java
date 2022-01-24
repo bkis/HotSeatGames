@@ -69,7 +69,7 @@ public class HotSeatGames {
 			// start game for each player in succession, add won points
 			for (Player player : players) {
 				input.prompt("> " + player.getName() 
-					+ ", press [ENTER] when you're ready!");
+					+ ", press [ENTER] when you're ready!\n");
 				int points = game.startRound(player.getName());
 				Delay.now(500);
 				StringUtils.printLineBreaks(1);
