@@ -34,11 +34,14 @@ public class HotSeatGames {
 
 	private HotSeatGames() {
 		StringUtils.cls(); // clear screen
+		
 		// slide in "HOT SEAT GAMES" intro banner
 		StringUtils.slideInText(
 				ResourceReader.readResource("intro_banner.ascii", getClass()),
 				150, 4);
+		
 		StringUtils.printLineBreaks(1);
+		
 		this.input = UserInput.instance(); // create user input wrapper instance
 		this.players = createPlayers(); // create players
 		this.games = createGames(); // create list of games to play
@@ -50,6 +53,7 @@ public class HotSeatGames {
 		// iterate over every game planned for this session
 		while(games.gamesLeft() > 0) {
 			StringUtils.printLineBreaks(1);
+			
 			// prompt for ENTER to start next game
 			input.prompt("Press [ENTER] to start game " 
 					+ games.currentGameNumber() + " of " 
@@ -66,6 +70,7 @@ public class HotSeatGames {
 					150, 0); // layout and print instructions
 			Delay.now(500); // delay
 			StringUtils.printLineBreaks(1);
+			
 			// start game for each player in succession, add won points
 			for (Player player : players) {
 				input.prompt("> " + player.getName() 
@@ -79,6 +84,7 @@ public class HotSeatGames {
 				player.addPoints(points);
 				Delay.now(500);
 			}
+			
 			printPoints(games.gamesLeft() == 0); // print current points table
 		}
 	}
@@ -88,6 +94,7 @@ public class HotSeatGames {
 	 */
 	private void printPoints(boolean end) {
 		sortPlayersByPoints();
+		
 		// print points table
 		System.out.println("\n============================================");
 		System.out.println("RANK\tPLAYER\n");
@@ -96,9 +103,10 @@ public class HotSeatGames {
 			System.out.println(players[i]);
 		}
 		System.out.println("============================================\n\n");
+		
 		// end of games session?
-		if (!end)
-			return;
+		if (!end) return;
+		
 		// who won?
 		// filter winners
 		Player[] winners = Arrays.asList(players)
@@ -174,7 +182,6 @@ public class HotSeatGames {
 			public int compare(Player o1, Player o2) {
 				return o2.getPoints() - o1.getPoints();
 			}
-			
 		});
 	}
 
