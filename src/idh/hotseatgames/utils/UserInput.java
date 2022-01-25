@@ -18,7 +18,7 @@ public class UserInput {
 	 * A private constructor (can only be called from within this class!)
 	 */
 	private UserInput() {
-		this.scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 	}
 	
 	/**
@@ -41,7 +41,7 @@ public class UserInput {
 	 */
 	public String prompt(String prompt) {
 		System.out.print(prompt.trim() + " ");
-		return this.scanner.nextLine();
+		return scanner.nextLine();
 	}
 	
 	/**
@@ -77,10 +77,12 @@ public class UserInput {
 	}
 	
 	/**
-	 * Cleans up the resources used by this instance
+	 * Cleans up the resources used by this instance.
+	 * This method should NEVER be called from within a game, as the input stream is managed
+	 * by the engine. Once it is closed, the engine loses access to the input stream (bad!).
 	 */
 	public void close() {
-		this.scanner.close();
+		scanner.close();
 	}
 	
 }

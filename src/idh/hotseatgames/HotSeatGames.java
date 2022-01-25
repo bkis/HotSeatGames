@@ -39,14 +39,22 @@ public class HotSeatGames {
 		StringUtils.slideInText(
 				ResourceReader.readResource("intro_banner.ascii", getClass()),
 				150, 4);
-		
 		StringUtils.printLineBreaks(1);
 		
-		this.input = UserInput.instance(); // create user input wrapper instance
-		this.players = createPlayers(); // create players
-		this.games = createGames(); // create list of games to play
-		this.startGames(); // start games
-		this.input.close(); // close user input resources
+		input = UserInput.instance(); // create user input wrapper instance
+		boolean restart = false;
+		
+		do {
+			players = createPlayers(); // create players
+			games = createGames(); // create list of games to play
+			startGames(); // start games
+			// ask if player want to play another round
+			restart = !input.prompt("> Do you want to play another round? (y/n)", "[yn]")
+					.toLowerCase()
+					.equals("n");
+		} while (restart);
+		
+		input.close(); // close user input resources
 	}
 	
 	private void startGames() {
