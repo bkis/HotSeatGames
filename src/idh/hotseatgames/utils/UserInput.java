@@ -3,7 +3,8 @@ package idh.hotseatgames.utils;
 import java.util.Scanner;
 
 /**
- * A wrapper class for easily prompting for user input
+ * A wrapper class for easily prompting for user input and
+ * validating it based on various constraints.
  * 
  * @author bkis
  * 
@@ -34,7 +35,7 @@ public class UserInput {
 	}
 	
 	/**
-	 * Prompts for user input using the passed string.
+	 * Prompts the user for arbitrary input using the passed string.
 	 * @param prompt The prompt text
 	 * @return String containing the user input
 	 */
@@ -59,8 +60,8 @@ public class UserInput {
 	}
 	
 	/**
-	 * Prompts the user for a numeric value using the passed string.
-	 * If the input doesn't match the given constraints,
+	 * Prompts the user for a numeric (integer) value using the passed string.
+	 * If the input doesn't match the given constraints (is not within the given range),
 	 * the user will be prompted again.
 	 * @param prompt The prompt text
 	 * @param min the smallest allowed number
