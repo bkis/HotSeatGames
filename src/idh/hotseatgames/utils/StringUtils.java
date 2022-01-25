@@ -98,10 +98,12 @@ public class StringUtils {
 	
 	/**
 	 * Returns a sequence of blank spaces of the given length {@code width}.
-	 * @param width The padding width / length of blank spaces sequence
+	 * @param width The padding width / length of blank spaces sequence (must be greater than 0)
 	 * @return The resulting blank spaces sequence
 	 */
 	public static String padString(int width) {
+		if (width <= 0)
+			throw new IllegalArgumentException("Padding width must be > 0.");
 		return width > 0 ? String.format("%" + width + "s", "") : "";
 	}
 	
