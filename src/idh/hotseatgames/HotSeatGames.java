@@ -12,7 +12,7 @@ import idh.hotseatgames.utils.UserInput;
 
 /**
  * Hot Seat Games - a collection of small, simple, randomly selected CLI
- * minigames that can be played by two or more alternating players at the 
+ * minigames that can be played by two or more alternating players on the 
  * same computer.
  * 
  * @author bkis
